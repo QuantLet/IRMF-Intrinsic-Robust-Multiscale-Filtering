@@ -1,0 +1,87 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.special import erf
+
+# -------------------------------------------------
+# Robust loss functions
+# -------------------------------------------------
+
+# u range
+u = np.linspace(-4, 4, 1000)
+
+# Smoothing parameter
+H = 1.0
+
+# Mean (L2) loss
+rho_mean = u**2 / 2
+
+# Median (L1) loss
+rho_median = np.abs(u)
+
+# Smoothed median loss
+rho_smooth = (
+    u * erf(u / (np.sqrt(2) * H))
+    + H * np.sqrt(2 / np.pi)
+      * np.exp(-u**2 / (2 * H**2))
+)
+
+# -------------------------------------------------
+# Plot
+# -------------------------------------------------
+
+plt.figure(figsize=(7, 4.5), facecolor='none')
+
+# Mean loss
+plt.plot(
+    u,
+    rho_mean,
+    color='#1f77b4',
+    linewidth=3,
+    label='Mean'
+)
+
+# Median loss
+plt.plot(
+    u,
+    rho_median,
+    color='red',
+    linewidth=3,
+    label='Median'
+)
+
+# Smoothed loss
+plt.plot(
+    u,
+    rho_smooth,
+    color='#2ca02c',
+    linestyle='--',
+    linewidth=3,
+    label=fr'$H={H}$'
+)
+
+plt.xlabel(r'$u$', fontsize=18)
+plt.ylabel(r'$\rho(u)$', fontsize=18)
+
+plt.xlim(-4, 4)
+plt.ylim(0, 8.2)
+
+plt.xticks(np.arange(-4, 5, 1), fontsize=14)
+plt.yticks(np.arange(0, 9, 1), fontsize=14)
+
+ax = plt.gca()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_facecolor('none')
+
+plt.legend(frameon=False, fontsize=14)
+
+plt.tight_layout()
+
+plt.savefig(
+    "rho_loss_H1.png",
+    dpi=400,
+    transparent=True,
+    bbox_inches="tight"
+)
+
+plt.show()
