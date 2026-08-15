@@ -4,7 +4,7 @@ Published in: IRMF-Intrinsic-Robust-Multiscale-Filtering
 
 Description: Simulations for IRMF.  We consider two choices of signal, two types of errors different parameters. 
 
-Signal1 (c=1 ): X_t = 1.2¡¤sin(2¦Ðt) + 0.5¡¤sin(6¦Ðt)  for t ¡Ê [0,1]
+Signal1 (c=1 ): X_t = 1.2sin(2\pi t) + 0.5sin(6\pi t)  for t Â¡ÃŠ [0,1]
 
 Error1 (t=1): Y_t=X_t with probabilities 1-p and Y_t=0 with probabilities p. 
                       If t=1&tc=1, p=0.2. If t=1&tc=2, p=0.4
