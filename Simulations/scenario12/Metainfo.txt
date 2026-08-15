@@ -4,7 +4,7 @@ Published in: IRMF-Intrinsic-Robust-Multiscale-Filtering
 
 Description: Simulations for IRMF.  
 
-Signal1 (c=1 ): X_t = 1.2¡¤sin(2¦Ðt) + 0.5¡¤sin(6¦Ðt)  for t ¡Ê [0,1]
+Signal1 (c=1 ): X_t = 1.2 sin(2\pi t) + 0.5 sin(6\pi t)  for t \in  [0,1]
 
 Error2 (t=2): e_t\sim 0.1u_t, u_t \sim (1-p) N(0,1)+p N(0,c^2). 
                       If t=2&tc=1, c=4. If t=2&tc=2, c=7
