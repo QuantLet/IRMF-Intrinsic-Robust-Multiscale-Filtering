@@ -1,1 +1,14 @@
 
+Name of Quantlet: Loss_functions
+
+Published in: IRMF-Intrinsic-Robust-Multiscale-Filtering
+
+Description: This Python script generates the RHO function with different H
+
+Keywords: synthetic signal, sine wave, time series, visualization, signal processing, Robust Smoothing, Intrinsic Robust Filtering
+
+Author: Wolfgang Karl Härdle
+
+Info: Generated using ChatGPT
+
+Submitted: 15 August 2026
