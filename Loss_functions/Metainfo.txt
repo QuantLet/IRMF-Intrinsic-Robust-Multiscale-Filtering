@@ -1,14 +1,14 @@
 
-Name of Quantlet: Signal_2SIN
+Name of Quantlet: Loss_functions
 
 Published in: IRMF-Intrinsic-Robust-Multiscale-Filtering
 
-Description: This Python script generates a synthetic time series defined as X_t = 1.2·sin(2πt) + 0.5·sin(6πt) on the interval t ∈ [0,1]. It constructs a fine time grid, evaluates the signal, and produces a publication-quality line plot of X_t against t. 
+Description: This Python script generates the RHO function with different H
 
-Keywords: synthetic signal, sine wave, time series, visualization, signal processing
+Keywords: synthetic signal, sine wave, time series, visualization, signal processing, Robust Smoothing, Intrinsic Robust Filtering
 
 Author: Wolfgang Karl Härdle
 
 Info: Generated using ChatGPT
 
-Submitted: 14 August 2026
+Submitted: 15 August 2026
