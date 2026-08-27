@@ -13,9 +13,9 @@ Under Error1, if tc=1, we set p=0.2; If tc=2, we set p=0.4. If tc leaves blank, 
 Error2 (t=2): e_t\sim 0.1u_t, u_t \sim (1-p) N(0,1)+p N(0,c^2). 
 Under Error2, we choose p=0.2. If tc=1, we set c=4; If tc=2, we set c=7; If tc leaves blank, we calculate both for comparison.   
 
-For example, scenario 12 corresponds to c=1 and t=2. 
-
 In each simulation, we generate n observations. Conduct the kth component IRMF estimate \tilde S_t^{(k)}. We also repeat the simulation m times and calculate the kth component (population level) IRMF estimate S_t^{(k)}. We compare the estimated error \tilde S_t^{(k)}- S_t^{(k)} and deviation from signal \sum_{l=1}^k\tilde S_t^{(l)}-X_t. Provide pointwise QQplot, sup estimated error plot, sup deviation from signal plot, scaled integrated mean square of estimated error plot and scaled integrated mean square of deviation from signal plot.  
+
+For example, scenario 12 corresponds to c=1 and t=2. By default, n=2000, m=1000, the objective function uses H=1 and the bandwidth h=0.2/(sqrt(2))^(k-1). 
 
 Keywords: synthetic signal, sine wave, time series, visualization, signal processing
 
